@@ -23,9 +23,9 @@ fun FeedView() {
         Modifier
             .fillMaxHeight()
             .fillMaxWidth()
-            .background(Color.Red)
-            .padding(20.dp)) {
-        FeedStories()
+            .background(Color.Black)
+    ) {
+        FeedStories(feedViewModel)
 
         FeedPostList(feedViewModel)
     }
