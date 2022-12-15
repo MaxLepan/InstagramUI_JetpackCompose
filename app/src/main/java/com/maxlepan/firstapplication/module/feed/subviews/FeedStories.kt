@@ -6,33 +6,28 @@ import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.material.Text
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.maxlepan.firstapplication.Greeting
-import com.maxlepan.firstapplication.ui.theme.FirstApplicationTheme
 
 @Composable
-fun FeedView() {
+fun FeedStories() {
     val feedViewModel = viewModel<FeedViewModel>()
 
     Column (
         Modifier
-            .fillMaxHeight()
             .fillMaxWidth()
-            .background(Color.Red)
+            .background(Color.Blue)
             .padding(20.dp)) {
-        FeedStories()
-
-        FeedPostList(feedViewModel)
+        Text(text = "Stories")
     }
 }
 
 @Preview(showBackground = true)
 @Composable
-fun DefaultPreview() {
-    FeedView()
+fun FeedStoriesPreview() {
+    FeedStories()
 }

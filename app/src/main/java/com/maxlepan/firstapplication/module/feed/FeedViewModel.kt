@@ -15,15 +15,18 @@ class FeedViewModel:ViewModel() {
     private val _title = MutableStateFlow<String>("")
     var title = _title.asStateFlow()
 
-    fun getPosts() {
+    init {
+        getPosts()
+    }
 
+    fun getPosts() {
         viewModelScope.launch {
             _postList.emit(
                 listOf(
                     Post(
                         "0",
                         "Jacques",
-                        "img.png",
+                        "https://placeimg.com/500/500/any",
                         "10-10-2022",
                         "Petites vacances",
                         listOf(),
