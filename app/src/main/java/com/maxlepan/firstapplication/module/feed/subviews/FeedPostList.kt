@@ -25,11 +25,7 @@ import com.maxlepan.firstapplication.ui.components.RoundedImage
 @Composable
 fun FeedPostList(feedViewModel: FeedViewModel) {
     val postList = feedViewModel.postList.collectAsState()
-    Column (
-        Modifier
-            .verticalScroll(rememberScrollState())
-            )
-    {
+    Column {
         postList.value.forEach { post ->
             Column(
                 Modifier
